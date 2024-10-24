@@ -1,0 +1,302 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column; 
+}
+
+.navbar-left {
+    width: 100%;
+    background-color: #000000;
+    color: white;
+    height: 300vh;
+    padding: 20px;
+}
+
+.navbar-left a {
+    text-decoration: none;
+    color: white;
+}
+
+.navbar-left ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.navbar-left ul li {
+    margin-top: 30px;
+    font-weight: bold;
+}
+
+.navbar-left ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.main-content {
+    flex: 1;
+    padding: 20px;
+    background-color: white;
+    position: relative;
+}
+
+.top-navbar {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+}
+
+.user-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.user-icon {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: white;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.user-dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    color: black;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+/* Dashboard content */
+.dashboard-content {
+    margin-top: 80px;
+    padding: 6px;
+}
+
+.dashboard-content h1 {
+    font-size: 30px;
+    text-align: center;
+    color: #333;
+}
+
+
+.card-container {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    height: 80vh;
+    margin-left: 10px;
+}
+
+.card-containers {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 15px;
+}
+
+.discount-card {
+    background: gold;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 505px;
+    position: relative;
+    color: black;
+    text-align: left;
+    font-family: 'Arial', sans-serif;
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.card-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.card-header h2 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 30px;
+    margin-top: -7px;
+}
+
+.card-body h3 {
+    font-size: 32px;
+    color: #ffffff;
+    text-align: left;
+    margin-top: 80px;   
+    font-weight: bold;
+    text-shadow: 
+        -2px -1px 0 #000,  
+         1px -1px 0 #000,  
+        -2px  1px 0 #000,  
+         1px  1px 0 #000;
+}
+
+.card-number {
+    font-size: 28px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.validity {
+    margin: 10px 0;
+    font-size: 16px;
+    text-align: right;
+}
+
+.user-info {
+    margin-top: 10px;
+    font-size: 18px;
+    font-style: normal;
+}
+
+.qr-code {
+    position: absolute;
+    right: 20px;
+    margin-top: -28px;
+    margin-right: 1px;
+}
+
+.qr-code img {
+    width: 150px;
+    height: 150px;
+}
+
+
+
+@media (max-width: 1024px) {
+    .container {
+        flex-direction: column; 
+    }
+
+    .navbar-left {
+        width: 100%; 
+        height: auto;
+    }
+
+    .card-containers {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .discount-card {
+        width: 90%; 
+    }
+
+    .card-header {
+        flex-direction: column; 
+        text-align: center;
+    }
+
+    .card-header h2 {
+        margin-right: 0;
+        margin-top: 10px;
+    }
+
+    .card-body h3 {
+        font-size: 28px; 
+        margin-top: 40px;
+    }
+
+    .card-number {
+        font-size: 24px;
+    }
+
+    .qr-code img {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .navbar-left {
+        width: 100%;
+        height: auto;
+        padding: 10px;
+    }
+
+    .card-containers {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .discount-card {
+        width: 90%; 
+        margin-bottom: 20px;
+    }
+
+    .card-header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card-header h2 {
+        font-size: 16px;
+    }
+
+    .card-body h3 {
+        font-size: 24px; 
+        margin-top: 30px;
+    }
+
+    .card-number {
+        font-size: 22px;
+    }
+
+    .qr-code img {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+
+@media (min-width: 1200px) {
+    .container {
+        flex-direction: row;
+    }
+
+    .navbar-left {
+        width: 250px;
+    }
+
+    .card-containers {
+        justify-content: space-between;
+    }
+
+    .discount-card {
+        width: 505px; 
+    }
+}
